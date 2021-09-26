@@ -1,0 +1,336 @@
+/* regles concernant les Blocs */
+/* regles concernant le texte */
+/* regles concernant le reste : background, border... */
+
+/*----------------------------------------------------------------------------*\
+    BASE
+\*----------------------------------------------------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1em;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.75; /* interligne calculer en divisant taille police par taille interligne du texte dans la maquette fichier psd */
+  color: #737373;
+}
+
+a {
+  color: inherit; /* couleur héritée de body */
+  text-decoration: none;
+}
+
+h2.all {
+  padding-left: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+
+  font-weight: 700;
+
+  border-left: 5px solid orange;
+}
+
+p {
+  width: 100%;
+  margin: 0 20px 20px 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* couleur de selection texte*/
+::selection {
+  color: #fff;
+  text-shadow: none;
+
+  background: #f39c12;
+}
+
+/* firefox */
+::-moz-selection {
+  color: #fff;
+  text-shadow: none;
+
+  background: #f39c12;
+}
+
+/* explorer */
+::-webkit-selection {
+  color: #fff;
+  text-shadow: none;
+
+  background: #f39c12;
+}
+
+/*----------------------------------------------------------------------------*\
+    Layout
+\*----------------------------------------------------------------------------*/
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3em 1.5em;
+}
+
+/*----------------------------------------------------------------------------*\
+    HEADER
+\*----------------------------------------------------------------------------*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+a.logo,
+a.logo:active {
+  display: block;
+  margin-top: 20px;
+
+  background-color: transparent;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0;
+
+  font-weight: 200;
+  letter-spacing: 2px;
+  list-style: none;
+
+  border: 1px solid white;
+}
+
+nav li a {
+  padding: 20px; /* 20px autout du texte du bouton */
+
+  color: white;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+
+  background-color: orange;
+  border: 1px solid;
+}
+
+nav li a:hover,
+a:active {
+  color: orange;
+
+  background-color: rgb(255, 255, 255);
+}
+
+/*----------------------------------------------------------------------------*\
+    ABOUT
+\*----------------------------------------------------------------------------*/
+.banner {
+  height: 700px;
+  width: 100%;
+  margin-top: 80px;
+
+  background-image: url(img/banner.jpg);
+  background-size: cover;
+}
+
+.banner h1 {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 250px;
+
+  border: 3px solid rgb(255, 255, 255);
+  background-color: rgb(65, 175, 194, 0.5);
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/*----------------------------------------------------------------------------*\
+    ROYAL FAMILY SECTION
+\*----------------------------------------------------------------------------*/
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Si nous voulions que nos flex-items soient répartis de manière égale en remplissant l'espace du container horizontalement, nous pourrions alors utiliser le justify-content et space-between ou space-around: */
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(158, 31, 31);
+  border: rgb(209, 173, 14);
+}
+
+.picture-king:hover,
+.picture-princess:hover,
+.picture-queen:hover {
+  border-bottom: 20px solid orange;
+}
+
+#gallery {
+  height: 700px;
+  width: 100%;
+  padding-top: 100px;
+}
+#royal-family {
+  height: 700px;
+  width: 100%;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 300;
+}
+
+/*----------------------------------------------------------------------------*\
+    ASSETS SECTION
+\*----------------------------------------------------------------------------*/
+#assets {
+  width: 100%;
+  height: 700px;
+  padding-top: 100px;
+}
+
+table {
+  width: 100%;
+  margin: auto;
+
+  color: white;
+
+  background-color: white;
+}
+
+thead tr {
+  font-weight: 100;
+  letter-spacing: 2px;
+
+  background-color: rgb(187, 100, 19);
+}
+
+tr {
+  height: 50px;
+
+  text-align: center;
+
+  background-color: orange;
+}
+
+tr.stripe {
+  background-color: rgb(243, 133, 7);
+}
+
+tr.head:hover {
+  background-color: #355d64;
+}
+
+tr:hover {
+  background-color: #41afc2;
+}
+/*----------------------------------------------------------------------------*\
+    CONTACT FORM
+\*----------------------------------------------------------------------------*/
+#contact {
+  width: 100%;
+  height: 700px;
+  padding-top: 100px;
+
+  background-color: white;
+}
+
+#contact h2 {
+  font-family: "Open Sans", sans-serif;
+}
+
+#contactForm {
+  margin: 0px 0px 50px 0px;
+
+  color: orange;
+}
+
+.form-input {
+  height: 20px;
+}
+
+.form-textarea {
+  font-family: "Open Sans", sans-serif;
+}
+.form-input,
+.form-textarea {
+  width: 97%;
+  display: block;
+  padding: 15px;
+
+  font-size: 15px;
+  line-height: 1.75;
+  color: #737373;
+
+  background: #c0dee4;
+  border: 2px solid #d9d9d9;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #f39c12;
+}
+
+.form-textarea {
+  height: 150px;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 0 40px;
+
+  font-size: 15px;
+  color: #737373;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 40px;
+  outline: none; /* retire la bordure bleur par defaut */
+
+  background-color: transparent;
+  background-color: rgba(orange, 0);
+  cursor: pointer; /* petite main qd survole bouton */
+  border: 2px solid orange;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: orange;
+  border-color: orange;
+  color: white;
+}
+
+.submit-btn:active,
+:focus {
+  background-color: orange;
+  border-color: white;
+  color: white;
+}
